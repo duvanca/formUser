@@ -1,0 +1,261 @@
+html {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    background-image: radial-gradient(#070e86 0.5px, transparent 0.5px), radial-gradient(#070e86 0.5px, #eeecec 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container__cards {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0px 30px;
+    margin-top: 90px;
+}
+
+.card {
+    border: 1px solid rgb(199, 195, 195);
+    background-color: rgb(252, 249, 249);
+    width: 300px;
+    height: 150px;
+    box-shadow: 0 5px 10px 3px rgba(2, 2, 7, 0.2);
+    font-weight: bold;
+
+
+}
+
+.head {
+    background: rgb(78, 78, 223);
+    
+    display: flex;
+    flex-direction: row-reverse;
+   
+}
+.head .bx{
+ color: rgb(255, 255, 255);
+}
+.delete{
+    color:white;
+}
+
+p {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: none;
+    margin-top: 5px;
+
+}
+
+.card__dates {
+    padding: 10px 10px;
+
+
+}
+
+button {
+    font-weight: bold;
+    padding: 4px 7px 4px 7px;
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(206, 60, 60);
+    color: white;
+
+}
+
+.container__btn {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   background: #eeecec;
+
+    width: 100%;
+    margin: auto;
+    position: fixed;
+    z-index: 20;
+    box-shadow: 0 4px 13px 1px rgb(0 0 0 /50%);
+
+
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+
+}
+
+.bx {
+    color: rgb(58, 58, 211);
+
+}
+
+.btn__user {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 30px, 30px;
+    background-color: rgb(58, 58, 211);
+    color: white;
+
+}
+   .btn__submit{
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 30px, 30px;
+    background-color: rgb(58, 58, 211);
+    color: white;
+   }
+
+.btn__user .bx{
+    color:white;
+}
+
+.title__form {
+    color: rgb(58, 58, 211);
+}
+
+.form {
+    margin-top: 90px;
+    margin-left: 50px;
+    background-color: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 3px rgb(0 0 0 /50%);
+    text-align: center;
+}
+
+.container__form {
+    margin-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9em;
+    margin-bottom: 20px;
+}
+
+.form__group {
+    position: relative;
+    width:100%;
+}
+
+.form__input{
+    background: none;
+    border: none;
+    outline: none;
+    /* border-bottom: 1px solid rgb(58, 58, 211); */
+    font-family: 'Roboto', sans-serif;
+    color:rgb(32, 32, 32);
+
+
+}
+
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label{
+    transform: translateY(-1px) scale(.3);
+    transform-origin:left top;
+    color:rgb(61, 51, 146);
+}
+
+.form__label{
+    cursor: pointer;
+    position: absolute;
+    top:-15px;
+    left:5px;
+    transform: translateY(19px);
+    transition: transform .3s, red .3s;
+    color: rgb(70, 66, 66);
+    font-size: 12px;
+}
+.form__{
+    margin-top:20px;
+    width:100%;
+}
+.date{
+    margin-bottom: 20px;
+    margin-top: 25px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.date label{
+ font-size: 12px;
+}
+.form__line{
+    position: absolute;
+    width: 100%;
+    height:0.5px;
+    bottom:0;
+    left:0;
+    background-color:rgb(49, 94, 177);
+    transform: scale(1);
+    transform:left bottom;
+    transition: transform .4s;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label{
+    transform: scale(1);
+}
+
+
+/* loader */
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgb(30, 39, 161);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+    .pepa{
+        width:500px;
+        height:500px;
+    }
