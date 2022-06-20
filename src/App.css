@@ -24,6 +24,9 @@ body {
     font-family: 'Roboto', sans-serif;
 
 }
+.container__btn{
+    position:fixed;
+}
 
 .container__cards {
     display: flex;
@@ -112,7 +115,11 @@ button:hover {
 
 .container {
     display: flex;
-    gap: 30px;
+    gap:30px;
+    max-width: 850px;
+    margin:auto;
+    /* align-items: center; */
+    /* justify-content: center; */
 
 }
 
@@ -149,11 +156,11 @@ button:hover {
 
 .form {
     margin-top: 90px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     background-color: white;
     width: 90%;
     max-width: 400px;
-    padding: 4.5em 3em;
+    padding: 3em 2em;
     border-radius: 10px;
     box-shadow: 0 5px 10px 3px rgb(0 0 0 /50%);
     text-align: center;
@@ -165,6 +172,10 @@ button:hover {
     flex-direction: column;
     gap: 1.9em;
     margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;  
+   
+    
 }
 
 .form__group {
@@ -255,7 +266,11 @@ button:hover {
     }
     } 
 
-    .pepa{
-        width:500px;
-        height:500px;
+    @media screen and (max-width: 500px){
+        .container {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        
+        }
     }

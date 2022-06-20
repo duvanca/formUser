@@ -20,9 +20,10 @@ function UsersList() {
   //-----> get---axios
   const dateuser = () => {
     axios.get(URL)
-      .then(res => {setUsesDates(res.data)
-      setLoader(false)
-    })
+      .then(res => {
+        setUsesDates(res.data)
+        setLoader(false)
+      })
       .catch(err => console.log(err))
   }
   console.log(usersDates)
@@ -75,58 +76,58 @@ function UsersList() {
 
 
   return (
-<div>
-    <header className="container__btn">
+    <div>
+      <header className="container__btn">
         <button className="btn__user" onClick={showForm}>{isShowForm ? "Cerrar Formulario" : "Nuevo Usuario"}<i class='bx bxs-user'></i></button>
       </header>
-    
-    {loader?<Loader/>:
-    <div className="form_">
-        <div className="container">
-          <div className="container__form">
-            {
 
-              isShowForm && <FormUser
-                newUser={newUser}
-                setUpdate={setUpdate}
-                patchUser={patchUser}
-                update={update}
-                reset={reset}
-                handleSubmit={handleSubmit}
-                register={register}
-                showForm={showForm}
-                setItShowForm={setItShowForm}
+      {loader ? <Loader /> :
+        <div className="form_">
+          <div className="container">
+            <div className="container__form">
+              {
 
-              />
-
-            }
-          </div>
-
-          <div className="container__cards">
-
-            {
-              usersDates?.map(userDate => (
-                <CardUser
-                  userDate={userDate}
-                  key={userDate.id}
-                  URL={URL}
-                  dateuser={dateuser}
-                  showForm={showForm}
+                isShowForm && <FormUser
+                  newUser={newUser}
                   setUpdate={setUpdate}
+                  patchUser={patchUser}
+                  update={update}
                   reset={reset}
+                  handleSubmit={handleSubmit}
+                  register={register}
+                  showForm={showForm}
                   setItShowForm={setItShowForm}
-                  isShowForm={isShowForm}
+
                 />
 
-              )
-              )
-            }
+              }
             </div>
+
+            <div className="container__cards">
+
+              {
+                usersDates?.map(userDate => (
+                  <CardUser
+                    userDate={userDate}
+                    key={userDate.id}
+                    URL={URL}
+                    dateuser={dateuser}
+                    showForm={showForm}
+                    setUpdate={setUpdate}
+                    reset={reset}
+                    setItShowForm={setItShowForm}
+                    isShowForm={isShowForm}
+                  />
+
+                )
+                )
+              }
             </div>
-          
-      </div>
-}
-      </div>
+          </div>
+
+        </div>
+      }
+    </div>
   )
 }
 

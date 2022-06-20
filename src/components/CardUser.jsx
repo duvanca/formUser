@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-const CardUser = ({ userDate, dateuser, URL, reset, setItShowForm, setUpdate, isShowForm,showForm }) => {
+const CardUser = ({ userDate, dateuser, URL, reset, setItShowForm, setUpdate, isShowForm, showForm }) => {
 
     //axios----> delet
     const deletUser = id => {
@@ -22,21 +22,21 @@ const CardUser = ({ userDate, dateuser, URL, reset, setItShowForm, setUpdate, is
             first_name: userDate.first_name,
             last_name: userDate.last_name,
             password: userDate.password
-            
-            
+
+
         }
         reset(obj)
-     setItShowForm(!isShowForm)
-        
+        setItShowForm(!isShowForm)
+
         setUpdate(userDate)
-        
+
     }
 
 
     return (
         <article className="card">
             <header className="head">
-                <button className="delete"onClick={() => deletUser(userDate.id)}>X</button>
+                <button className="delete" onClick={() => deletUser(userDate.id)}>X</button>
                 <button onClick={update}><i class='bx bx-edit-alt'></i></button>
             </header>
             <div className="card__dates">
