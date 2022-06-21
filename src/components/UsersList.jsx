@@ -78,7 +78,7 @@ function UsersList() {
   return (
     <div>
       <header className="container__btn">
-        <button className="btn__user" onClick={showForm}>{isShowForm ? "Cerrar Formulario" : "Nuevo Usuario"}<i class='bx bxs-user'></i></button>
+        <button className="btn__user" onClick={showForm}>{isShowForm ? "Cerrar Formulario" : "Nuevo Usuario"}<i className='bx bxs-user'></i></button>
       </header>
 
       {loader ? <Loader /> :

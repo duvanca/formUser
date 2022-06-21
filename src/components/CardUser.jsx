@@ -37,12 +37,12 @@ const CardUser = ({ userDate, dateuser, URL, reset, setItShowForm, setUpdate, is
         <article className="card">
             <header className="head">
                 <button className="delete" onClick={() => deletUser(userDate.id)}>X</button>
-                <button onClick={update}><i class='bx bx-edit-alt'></i></button>
+                <button onClick={update}><i className='bx bx-edit-alt'></i></button>
             </header>
             <div className="card__dates">
-                <p><i class='bx bxs-user'></i>{userDate.first_name} {userDate.last_name}</p>
-                <p><i class='bx bxs-envelope'></i>{userDate.email}</p>
-                <p><i class='bx bxs-cake'></i>{userDate.birthday}</p>
+                <p><i className='bx bxs-user'></i>{userDate.first_name} {userDate.last_name}</p>
+                <p><i className='bx bxs-envelope'></i>{userDate.email}</p>
+                <p><i className='bx bxs-cake'></i>{userDate.birthday}</p>
             </div>
 
         </article>
