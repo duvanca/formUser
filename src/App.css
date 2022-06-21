@@ -24,8 +24,9 @@ body {
     font-family: 'Roboto', sans-serif;
 
 }
-.container__btn{
-    position:fixed;
+
+.container__btn {
+    position: fixed;
 }
 
 .container__cards {
@@ -52,16 +53,18 @@ body {
 
 .head {
     background: rgb(78, 78, 223);
-    
+
     display: flex;
     flex-direction: row-reverse;
-   
+
 }
-.head .bx{
- color: rgb(255, 255, 255);
+
+.head .bx {
+    color: rgb(255, 255, 255);
 }
-.delete{
-    color:white;
+
+.delete {
+    color: white;
 }
 
 p {
@@ -102,7 +105,7 @@ button:hover {
     align-items: center;
     justify-content: center;
 
-   background: #eeecec;
+    background: #eeecec;
 
     width: 100%;
     margin: auto;
@@ -115,10 +118,10 @@ button:hover {
 
 .container {
     display: flex;
-    gap:30px;
+    gap: 30px;
     max-width: 1100px;
-    margin:auto;
-    width:90%;
+    margin: auto;
+    width: 90%;
     /* align-items: center; */
     /* justify-content: center; */
 
@@ -139,16 +142,17 @@ button:hover {
     color: white;
 
 }
-   .btn__submit{
+
+.btn__submit {
     cursor: pointer;
     border-radius: 7px;
     padding: 30px, 30px;
     background-color: rgb(58, 58, 211);
     color: white;
-   }
+}
 
-.btn__user .bx{
-    color:white;
+.btn__user .bx {
+    color: white;
 }
 
 .title__form {
@@ -159,9 +163,9 @@ button:hover {
     margin-top: 90px;
     /* margin-left: 50px; */
     background-color: white;
-    width: 300px; 
-     max-width: 500px; 
-    padding: 3em 2em; 
+    width: 300px;
+    max-width: 500px;
+    padding: 3em 2em;
     border-radius: 10px;
     box-shadow: 0 5px 10px 3px rgb(0 0 0 /50%);
     text-align: center;
@@ -173,74 +177,78 @@ button:hover {
     flex-direction: column;
     gap: 1.9em;
     margin-bottom: 20px;
-   align-items: center;
-   
-    
+    align-items: center;
+
+
 }
 
 .form__group {
     position: relative;
-    width:100%;
+    width: 100%;
 }
 
-.form__input{
+.form__input {
     background: none;
     border: none;
     outline: none;
     /* border-bottom: 1px solid rgb(58, 58, 211); */
     font-family: 'Roboto', sans-serif;
-    color:rgb(32, 32, 32);
+    color: rgb(32, 32, 32);
+    width:100%;
 
 
 }
 
 
-.form__input:focus + .form__label,
-.form__input:not(:placeholder-shown) + .form__label{
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
     transform: translateY(-1px) scale(.3);
-    transform-origin:left top;
-    color:rgb(61, 51, 146);
+    transform-origin: left top;
+    color: rgb(61, 51, 146);
 }
 
-.form__label{
+.form__label {
     cursor: pointer;
     position: absolute;
-    top:-15px;
-    left:5px;
+    top: -15px;
+    left: 5px;
     transform: translateY(19px);
     transition: transform .3s, red .3s;
     color: rgb(70, 66, 66);
     font-size: 12px;
 }
-.form__{
-    margin-top:20px;
-    width:100%;
-}
-.date{
-    margin-bottom: 20px;
-    margin-top: 25px;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+
+.form__ {
+    margin-top: 20px;
+    width: 100%;
 }
 
-.date label{
- font-size: 12px;
+.date {
+    margin-bottom: 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.form__line{
+
+.date label {
+    font-size: 12px;
+}
+
+.form__line {
     position: absolute;
     width: 100%;
-    height:0.5px;
-    bottom:0;
-    left:0;
-    background-color:rgb(49, 94, 177);
+    height: 0.5px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(49, 94, 177);
     transform: scale(1);
-    transform:left bottom;
+    transform: left bottom;
     transition: transform .4s;
 }
 
-.form__input:focus ~ .form__label,
-.form__input:not(:placeholder-shown) ~ .form__label{
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown)~.form__label {
     transform: scale(1);
 }
 
@@ -255,22 +263,23 @@ button:hover {
     display: inline-block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    }
+}
 
-    @keyframes rotation {
+@keyframes rotation {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
-    } 
+}
 
-    @media screen and (max-width: 500px){
-        .container {
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-        
-        }
+@media screen and (max-width: 500px) {
+    .container {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
     }
+}
